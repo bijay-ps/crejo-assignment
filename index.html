@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Credit Card input!</h1>
+        <div class="helper-text">Credit Card Form.</div>
+        <div class="credit-card-design">
+            <div class="front_side">
+                <div class="number-placeholder">
+                    <div class="block-1">
+                        <span id="num1"></span>
+                        <span id="num2"></span>
+                        <span id="num3"></span>
+                        <span id="num4"></span>
+                    </div>
+                    <div class="block-2">
+                        <span id="num5"></span>
+                        <span id="num6"></span>
+                        <span id="num7"></span>
+                        <span id="num8"></span>
+                    </div>
+                    <div class="block-3">
+                        <span id="num9"></span>
+                        <span id="num10"></span>
+                        <span id="num11"></span>
+                        <span id="num12"></span>
+                    </div>
+                    <div class="block-4">
+                        <span id="num13"></span>
+                        <span id="num14"></span>
+                        <span id="num15"></span>
+                        <span id="num16"></span>
+                    </div>
+                </div>
+                <div class="other-details">
+                    <div id="name-placeHolder">YOUR NAME HERE</div>
+                    <div class="date">
+                        <p class="title">valid thru</p>
+                        <div class="date-format">
+                            <span id="mm1"></span><span id="mm2"></span>/<span id="yy1"></span><span id="yy2"></span>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back_side card-hidden rotate">
+                <div class="strip">
+                    <div class="cvv-num"></div>
+                </div>
+            </div>
+        </div>
+        <section class="credit-card-form">
+            <section class="card-number-container">
+                <input class="cc-big-input" id="cc-number" placeholder="Card number" maxlength="19" type="text" name="number">
+                <i class="fa fa-address-card" aria-hidden="true"></i>
+            </section>
+            <input class="cc-big-input" id="cc-holder-name" placeholder="Name" type="text" name="name">
+            <div class="cc-other-details">
+                <input placeholder="Valid Thru" id="cc-date" maxlength="7" name="expiry">
+                <input placeholder="CVV" type="password" id="cvv" name="cvv" maxlength="3" onfocus="showCard()" onblur="hideCard()">
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
